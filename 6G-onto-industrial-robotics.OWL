@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:ir6g="http://example.org/industrialrobotics6g#">
+
+    <owl:Ontology rdf:about="http://example.org/industrialrobotics6g"/>
+
+    <!-- Industrial Robotics System -->
+    <owl:Class rdf:about="ir6g:Industrial_Robot"/>
+    <owl:Class rdf:about="ir6g:Collaborative_Robot"/>
+    <owl:Class rdf:about="ir6g:Autonomous_Mobile_Robot"/>
+    <owl:Class rdf:about="ir6g:Robot_Controller"/>
+    <owl:Class rdf:about="ir6g:Sensor_Module"/>
+    <owl:Class rdf:about="ir6g:Actuator_Module"/>
+
+    <!-- Communication & Processing -->
+    <owl:Class rdf:about="ir6g:6G_Network"/>
+    <owl:Class rdf:about="ir6g:Edge_AI_Node"/>
+    <owl:Class rdf:about="ir6g:Cloud_Industrial_Storage"/>
+    <owl:Class rdf:about="ir6g:Digital_Twin"/>
+
+    <!-- Industrial Robotics Use Cases -->
+    <owl:Class rdf:about="ir6g:Automated_Assembly"/>
+    <owl:Class rdf:about="ir6g:Predictive_Maintenance"/>
+    <owl:Class rdf:about="ir6g:Smart_Logistics"/>
+    <owl:Class rdf:about="ir6g:Human_Robot_Collaboration"/>
+    <owl:Class rdf:about="ir6g:Quality_Control"/>
+
+    <!-- Relationships -->
+    <owl:ObjectProperty rdf:about="ir6g:controlledBy">
+        <rdfs:domain rdf:resource="ir6g:Industrial_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Robot_Controller"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:equippedWith">
+        <rdfs:domain rdf:resource="ir6g:Industrial_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Sensor_Module"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:transmitsDataTo">
+        <rdfs:domain rdf:resource="ir6g:Sensor_Module"/>
+        <rdfs:range rdf:resource="ir6g:Edge_AI_Node"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:processedBy">
+        <rdfs:domain rdf:resource="ir6g:Edge_AI_Node"/>
+        <rdfs:range rdf:resource="ir6g:Cloud_Industrial_Storage"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:virtualizedAs">
+        <rdfs:domain rdf:resource="ir6g:Industrial_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Digital_Twin"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:usedIn">
+        <rdfs:domain rdf:resource="ir6g:Industrial_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Automated_Assembly"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:usedIn">
+        <rdfs:domain rdf:resource="ir6g:Industrial_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Predictive_Maintenance"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:usedIn">
+        <rdfs:domain rdf:resource="ir6g:Autonomous_Mobile_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Smart_Logistics"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:usedIn">
+        <rdfs:domain rdf:resource="ir6g:Collaborative_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Human_Robot_Collaboration"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="ir6g:usedIn">
+        <rdfs:domain rdf:resource="ir6g:Industrial_Robot"/>
+        <rdfs:range rdf:resource="ir6g:Quality_Control"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

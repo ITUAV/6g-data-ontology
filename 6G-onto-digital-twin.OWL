@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:s6g="http://example.org/sustainable6g#">
+
+    <owl:Ontology rdf:about="http://example.org/sustainable6g"/>
+
+    <!-- Digital Twin Core Concepts -->
+    <owl:Class rdf:about="s6g:Digital_Twin_Model"/>
+    <owl:Class rdf:about="s6g:Real_World_Entity"/>
+    <owl:Class rdf:about="s6g:Simulation_Process"/>
+    <owl:Class rdf:about="s6g:Predictive_Analytics"/>
+
+    <!-- Digital Twin Data Sources -->
+    <owl:Class rdf:about="s6g:Network_Twin_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Industrial_Twin_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Smart_City_Twin_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Human_Twin_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+
+    <!-- Data Types for Digital Twins -->
+    <owl:Class rdf:about="s6g:Real_Time_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Synthetic_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Historical_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+
+    <!-- Digital Twin Processing & Storage -->
+    <owl:Class rdf:about="s6g:Edge_Cloud_Twin">
+        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Federated_Learning_Twin">
+        <rdfs:subClassOf rdf:resource="s6g:Processing"/>
+    </owl:Class>
+
+    <!-- Digital Twin Use Cases -->
+    <owl:Class rdf:about="s6g:5G_6G_Network_Optimization">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Smart_Manufacturing">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Autonomous_Cities">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Human_Centric_Digital_Twins">
+        <rdfs:subClassOf rdf:resource="s6g:Digital_Twin_Model"/>
+    </owl:Class>
+
+    <!-- Relationships -->
+    <owl:ObjectProperty rdf:about="s6g:mirrors">
+        <rdfs:domain rdf:resource="s6g:Digital_Twin_Model"/>
+        <rdfs:range rdf:resource="s6g:Real_World_Entity"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:generates">
+        <rdfs:domain rdf:resource="s6g:Digital_Twin_Model"/>
+        <rdfs:range rdf:resource="s6g:DataType"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:isProcessedBy">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Simulation_Process"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:trains">
+        <rdfs:domain rdf:resource="s6g:Simulation_Process"/>
+        <rdfs:range rdf:resource="s6g:Federated_Learning_Twin"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:predicts">
+        <rdfs:domain rdf:resource="s6g:Federated_Learning_Twin"/>
+        <rdfs:range rdf:resource="s6g:Predictive_Analytics"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:isStoredIn">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Edge_Cloud_Twin"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:optimizes">
+        <rdfs:domain rdf:resource="s6g:Predictive_Analytics"/>
+        <rdfs:range rdf:resource="s6g:5G_6G_Network_Optimization"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

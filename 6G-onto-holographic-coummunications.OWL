@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:h6g="http://example.org/holographic6g#">
+
+    <owl:Ontology rdf:about="http://example.org/holographic6g"/>
+
+    <!-- Holographic Communication System -->
+    <owl:Class rdf:about="h6g:Holographic_Communication_System"/>
+    <owl:Class rdf:about="h6g:Holographic_Transmitter"/>
+    <owl:Class rdf:about="h6g:Holographic_Receiver"/>
+    <owl:Class rdf:about="h6g:Holographic_Network"/>
+    <owl:Class rdf:about="h6g:Holographic_Processing_Unit"/>
+
+    <!-- Data Types for Holographic Communication -->
+    <owl:Class rdf:about="h6g:3D_Video_Stream"/>
+    <owl:Class rdf:about="h6g:Depth_Sensing_Data"/>
+    <owl:Class rdf:about="h6g:Point_Cloud_Data"/>
+    <owl:Class rdf:about="h6g:Holographic_Compressed_Data"/>
+
+    <!-- Transmission & Storage -->
+    <owl:Class rdf:about="h6g:Terahertz_Communication"/>
+    <owl:Class rdf:about="h6g:Edge_Computing_Node"/>
+    <owl:Class rdf:about="h6g:Cloud_Holographic_Storage"/>
+
+    <!-- Holographic Communication Use Cases -->
+    <owl:Class rdf:about="h6g:Holo_Conference"/>
+    <owl:Class rdf:about="h6g:Remote_Holo_Surgery"/>
+    <owl:Class rdf:about="h6g:Holo_Education"/>
+    <owl:Class rdf:about="h6g:Holo_Entertainment"/>
+
+    <!-- Relationships -->
+    <owl:ObjectProperty rdf:about="h6g:captures">
+        <rdfs:domain rdf:resource="h6g:Holographic_Transmitter"/>
+        <rdfs:range rdf:resource="h6g:3D_Video_Stream"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:transmits">
+        <rdfs:domain rdf:resource="h6g:Holographic_Transmitter"/>
+        <rdfs:range rdf:resource="h6g:Holographic_Network"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:processes">
+        <rdfs:domain rdf:resource="h6g:Holographic_Processing_Unit"/>
+        <rdfs:range rdf:resource="h6g:Holographic_Compressed_Data"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:stores">
+        <rdfs:domain rdf:resource="h6g:Cloud_Holographic_Storage"/>
+        <rdfs:range rdf:resource="h6g:Holographic_Compressed_Data"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:delivers">
+        <rdfs:domain rdf:resource="h6g:Holographic_Network"/>
+        <rdfs:range rdf:resource="h6g:Holographic_Receiver"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:usedIn">
+        <rdfs:domain rdf:resource="h6g:Holographic_Communication_System"/>
+        <rdfs:range rdf:resource="h6g:Holo_Conference"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:usedIn">
+        <rdfs:domain rdf:resource="h6g:Holographic_Communication_System"/>
+        <rdfs:range rdf:resource="h6g:Remote_Holo_Surgery"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:usedIn">
+        <rdfs:domain rdf:resource="h6g:Holographic_Communication_System"/>
+        <rdfs:range rdf:resource="h6g:Holo_Education"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="h6g:usedIn">
+        <rdfs:domain rdf:resource="h6g:Holographic_Communication_System"/>
+        <rdfs:range rdf:resource="h6g:Holo_Entertainment"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

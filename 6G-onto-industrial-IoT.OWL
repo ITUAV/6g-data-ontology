@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/sustainable6g#"
+     xml:base="http://example.org/sustainable6g"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:s6g="http://example.org/sustainable6g#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/sustainable6g"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- s6g:compliesWith -->
+
+    <owl:ObjectProperty rdf:about="s6g:compliesWith">
+        <rdfs:domain rdf:resource="s6g:IndustrialIoTSource"/>
+        <rdfs:range rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- s6g:generates -->
+
+    <owl:ObjectProperty rdf:about="s6g:generates">
+        <rdfs:domain rdf:resource="s6g:IndustrialIoTSource"/>
+        <rdfs:range rdf:resource="s6g:DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- s6g:impacts -->
+
+    <owl:ObjectProperty rdf:about="s6g:impacts">
+        <rdfs:domain rdf:resource="s6g:Transmission6G"/>
+        <rdfs:range rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- s6g:isStoredIn -->
+
+    <owl:ObjectProperty rdf:about="s6g:isStoredIn">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Storage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- s6g:isTransmittedBy -->
+
+    <owl:ObjectProperty rdf:about="s6g:isTransmittedBy">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Transmission6G"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.org/sustainable6g#A5G -->
+
+    <owl:Class rdf:about="http://example.org/sustainable6g#A5G">
+        <rdfs:subClassOf rdf:resource="s6g:Transmission6G"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sustainable6g#B5G -->
+
+    <owl:Class rdf:about="http://example.org/sustainable6g#B5G">
+        <rdfs:subClassOf rdf:resource="s6g:Transmission6G"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.org/sustainable6g#RPRasPIPIe -->
+
+    <owl:Class rdf:about="http://example.org/sustainable6g#RPRasPIPIe">
+        <rdfs:subClassOf rdf:resource="s6g:Human_Operators"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:AI_Model_Storage -->
+
+    <owl:Class rdf:about="s6g:AI_Model_Storage">
+        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Carbon_Tracking_IIoT -->
+
+    <owl:Class rdf:about="s6g:Carbon_Tracking_IIoT">
+        <rdfs:subClassOf rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:DataType -->
+
+    <owl:Class rdf:about="s6g:DataType"/>
+    
+
+
+    <!-- s6g:Energy_Usage_Data -->
+
+    <owl:Class rdf:about="s6g:Energy_Usage_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Human_Operators -->
+
+    <owl:Class rdf:about="s6g:Human_Operators">
+        <rdfs:subClassOf rdf:resource="s6g:IndustrialIoTSource"/>
+        <rdfs:comment>Orange</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- s6g:ISO_50001_Compliance -->
+
+    <owl:Class rdf:about="s6g:ISO_50001_Compliance">
+        <rdfs:subClassOf rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:IndustrialIoTSource -->
+
+    <owl:Class rdf:about="s6g:IndustrialIoTSource"/>
+    
+
+
+    <!-- s6g:Industrial_Cybersecurity -->
+
+    <owl:Class rdf:about="s6g:Industrial_Cybersecurity">
+        <rdfs:subClassOf rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Industrial_Edge_Cloud -->
+
+    <owl:Class rdf:about="s6g:Industrial_Edge_Cloud">
+        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Industrial_Sensors -->
+
+    <owl:Class rdf:about="s6g:Industrial_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:IndustrialIoTSource"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Logistics_Trackers -->
+
+    <owl:Class rdf:about="s6g:Logistics_Trackers">
+        <rdfs:subClassOf rdf:resource="s6g:IndustrialIoTSource"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Machine_Performance_Data -->
+
+    <owl:Class rdf:about="s6g:Machine_Performance_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Predictive_Maintenance_Data -->
+
+    <owl:Class rdf:about="s6g:Predictive_Maintenance_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Private_5G_Networks -->
+
+    <owl:Class rdf:about="s6g:Private_5G_Networks">
+        <rdfs:subClassOf rdf:resource="s6g:Transmission6G"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:RegulatoryCompliance -->
+
+    <owl:Class rdf:about="s6g:RegulatoryCompliance"/>
+    
+
+
+    <!-- s6g:Robotic_Systems -->
+
+    <owl:Class rdf:about="s6g:Robotic_Systems">
+        <rdfs:subClassOf rdf:resource="s6g:IndustrialIoTSource"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Smart_Meters -->
+
+    <owl:Class rdf:about="s6g:Smart_Meters">
+        <rdfs:subClassOf rdf:resource="s6g:IndustrialIoTSource"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Smart_Waste_Management -->
+
+    <owl:Class rdf:about="s6g:Smart_Waste_Management">
+        <rdfs:subClassOf rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:Storage -->
+
+    <owl:Class rdf:about="s6g:Storage"/>
+    
+
+
+    <!-- s6g:Supply_Chain_Data -->
+
+    <owl:Class rdf:about="s6g:Supply_Chain_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- s6g:SustainabilityMetrics -->
+
+    <owl:Class rdf:about="s6g:SustainabilityMetrics"/>
+    
+
+
+    <!-- s6g:Transmission6G -->
+
+    <owl:Class rdf:about="s6g:Transmission6G"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/sustainable6g#A5G"/>
+            <rdf:Description rdf:about="http://example.org/sustainable6g#B5G"/>
+            <rdf:Description rdf:about="s6g:Private_5G_Networks"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

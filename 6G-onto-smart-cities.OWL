@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:s6g="http://example.org/sustainable6g#">
+
+    <owl:Ontology rdf:about="http://example.org/sustainable6g"/>
+
+    <!-- Smart City Data Sources -->
+    <owl:Class rdf:about="s6g:SmartCitySource"/>
+    <owl:Class rdf:about="s6g:Traffic_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Air_Quality_Sensors">
+        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Smart_Streetlights">
+        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Surveillance_Cameras">
+        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Smart_Waste_Bins">
+        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
+    </owl:Class>
+
+    <!-- Smart City Data Types -->
+    <owl:Class rdf:about="s6g:Traffic_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Environmental_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Energy_Consumption_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Public_Safety_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Waste_Management_Data">
+        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
+    </owl:Class>
+
+    <!-- Smart City Transmission & Storage -->
+    <owl:Class rdf:about="s6g:5G_V2X_Communication">
+        <rdfs:subClassOf rdf:resource="s6g:Transmission"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Urban_Edge_Cloud">
+        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Municipal_Data_Lakes">
+        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
+    </owl:Class>
+
+    <!-- Sustainability & Compliance -->
+    <owl:Class rdf:about="s6g:Carbon_Tracking_SmartCities">
+        <rdfs:subClassOf rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Renewable_Energy_Integration">
+        <rdfs:subClassOf rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:GDPR_Compliance">
+        <rdfs:subClassOf rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Smart_City_Cybersecurity">
+        <rdfs:subClassOf rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:Class>
+
+    <!-- Relationships -->
+    <owl:ObjectProperty rdf:about="s6g:generates">
+        <rdfs:domain rdf:resource="s6g:SmartCitySource"/>
+        <rdfs:range rdf:resource="s6g:DataType"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:isStoredIn">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Storage"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:isTransmittedBy">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Transmission"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:impacts">
+        <rdfs:domain rdf:resource="s6g:Transmission"/>
+        <rdfs:range rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="s6g:compliesWith">
+        <rdfs:domain rdf:resource="s6g:SmartCitySource"/>
+        <rdfs:range rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

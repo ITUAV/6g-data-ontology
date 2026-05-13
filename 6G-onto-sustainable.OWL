@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:s6g="http://example.org/sustainable6g#">
+
+    <owl:Ontology rdf:about="http://example.org/sustainable6g"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="s6g:DataSource"/>
+    <owl:Class rdf:about="s6g:DataType"/>
+    <owl:Class rdf:about="s6g:CollectionMethod"/>
+    <owl:Class rdf:about="s6g:Transmission"/>
+    <owl:Class rdf:about="s6g:Storage"/>
+    <owl:Class rdf:about="s6g:RegulatoryCompliance"/>
+    <owl:Class rdf:about="s6g:SustainabilityMetrics"/>
+
+    <!-- Subclasses of DataSource -->
+    <owl:Class rdf:about="s6g:IoT_Sensor">
+        <rdfs:subClassOf rdf:resource="s6g:DataSource"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:UAV">
+        <rdfs:subClassOf rdf:resource="s6g:DataSource"/>
+    </owl:Class>
+    <owl:Class rdf:about="s6g:Satellite">
+        <rdfs:subClassOf rdf:resource="s6g:DataSource"/>
+    </owl:Class>
+
+    <!-- Relationships -->
+    <owl:ObjectProperty rdf:about="s6g:generates">
+        <rdfs:domain rdf:resource="s6g:DataSource"/>
+        <rdfs:range rdf:resource="s6g:DataType"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="s6g:appliesTo">
+        <rdfs:domain rdf:resource="s6g:CollectionMethod"/>
+        <rdfs:range rdf:resource="s6g:DataType"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="s6g:isStoredIn">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Storage"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="s6g:isTransmittedBy">
+        <rdfs:domain rdf:resource="s6g:DataType"/>
+        <rdfs:range rdf:resource="s6g:Transmission"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="s6g:impacts">
+        <rdfs:domain rdf:resource="s6g:Transmission"/>
+        <rdfs:range rdf:resource="s6g:SustainabilityMetrics"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="s6g:compliesWith">
+        <rdfs:domain rdf:resource="s6g:DataCollection"/>
+        <rdfs:range rdf:resource="s6g:RegulatoryCompliance"/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
