@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:c="https://w3id.org/6g-data-ontology/core#" xmlns:m="https://w3id.org/6g-data-ontology/holographic-communications#">
+<owl:Ontology rdf:about="https://w3id.org/6g-data-ontology/holographic-communications"><owl:imports rdf:resource="https://w3id.org/6g-data-ontology/core"/><owl:versionInfo>0.2.0</owl:versionInfo></owl:Ontology>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Communication_System"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Transmitter"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Receiver"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Network"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Processing_Unit"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#3D_Video_Stream"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Depth_Sensing_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Point_Cloud_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Compressed_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Terahertz_Communication"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Edge_Computing_Node"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Cloud_Holographic_Storage"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Application"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holo_Conference"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Remote_Holo_Surgery"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holo_Education"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holo_Entertainment"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Communication_System"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkService"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Network"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Processing_Unit"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Processing"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#3D_Video_Stream"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Depth_Sensing_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Point_Cloud_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Compressed_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Terahertz_Communication"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Transmission"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Edge_Computing_Node"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#EdgeNode"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Cloud_Holographic_Storage"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Storage"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Application"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holo_Conference"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Remote_Holo_Surgery"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holo_Education"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#Holo_Entertainment"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#captures"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Transmitter"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Data"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#transmits"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Transmitter"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Network"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#processes"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Processing_Unit"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Data"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#stores"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Cloud_Holographic_Storage"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Data"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#delivers"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Network"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Receiver"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/holographic-communications#usedIn"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Communication_System"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/holographic-communications#Holographic_Application"/></owl:ObjectProperty>
+</rdf:RDF>
