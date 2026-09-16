@@ -1,0 +1,12 @@
+PREFIX c: <https://w3id.org/6g-data-ontology/core#>
+PREFIX ir: <https://w3id.org/6g-data-ontology/industrial-robotics#>
+PREFIX ex: <https://w3id.org/6g-data-ontology/examples#>
+
+# CQ1: Which sensor modules transmit data to an edge AI node?
+SELECT ?sensor ?edge WHERE { ?sensor a ir:Sensor_Module ; ir:transmitsDataTo ?edge . ?edge a ir:Edge_AI_Node . }
+
+# CQ2: Which applications run on which compute resources?
+SELECT ?app ?resource WHERE { ?app a c:Application ; c:runsOn ?resource . }
+
+# CQ3: Which QoS requirements specify latency?
+SELECT ?qos ?latency WHERE { ?qos a c:QoSRequirement ; c:latencyMs ?latency . }

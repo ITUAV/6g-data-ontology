@@ -1,186 +1,40 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://example.org/healthcarerobotics6g#"
-     xml:base="http://example.org/healthcarerobotics6g"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:hr6g="http://example.org/healthcarerobotics6g#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://example.org/healthcarerobotics6g"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- hr6g:controlledBy -->
-
-    <owl:ObjectProperty rdf:about="hr6g:controlledBy">
-        <rdfs:domain rdf:resource="hr6g:Healthcare_Robot"/>
-        <rdfs:range rdf:resource="hr6g:Edge_AI_Node"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- hr6g:transmitsDataTo -->
-
-    <owl:ObjectProperty rdf:about="hr6g:transmitsDataTo">
-        <rdfs:domain rdf:resource="hr6g:Healthcare_Robot"/>
-        <rdfs:range rdf:resource="hr6g:Medical_Data_Storage"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- hr6g:usedIn -->
-
-    <owl:ObjectProperty rdf:about="hr6g:usedIn">
-        <rdfs:domain rdf:resource="hr6g:Assistive_RobotAssistive_Robot"/>
-        <rdfs:domain rdf:resource="hr6g:Diagnostic_Robot"/>
-        <rdfs:domain rdf:resource="hr6g:Healthcare_Robot"/>
-        <rdfs:domain rdf:resource="hr6g:Rehabilitation_Robot"/>
-        <rdfs:domain rdf:resource="hr6g:Surgical_Robot"/>
-        <rdfs:range rdf:resource="hr6g:Autonomous_Disinfection"/>
-        <rdfs:range rdf:resource="hr6g:Elderly_Care_Assistance"/>
-        <rdfs:range rdf:resource="hr6g:Rehabilitation_Therapy"/>
-        <rdfs:range rdf:resource="hr6g:Remote_Healthcare"/>
-        <rdfs:range rdf:resource="hr6g:Robot_Assisted_Surgery"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- hr6g:virtualizedAs -->
-
-    <owl:ObjectProperty rdf:about="hr6g:virtualizedAs">
-        <rdfs:domain rdf:resource="hr6g:Healthcare_Robot"/>
-        <rdfs:range rdf:resource="hr6g:Digital_Twin_Healthcare"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- hr6g:Assistive_RobotAssistive_Robot -->
-
-    <owl:Class rdf:about="hr6g:Assistive_RobotAssistive_Robot"/>
-    
-
-
-    <!-- hr6g:Autonomous_Disinfection -->
-
-    <owl:Class rdf:about="hr6g:Autonomous_Disinfection"/>
-    
-
-
-    <!-- hr6g:Diagnostic_Robot -->
-
-    <owl:Class rdf:about="hr6g:Diagnostic_Robot"/>
-    
-
-
-    <!-- hr6g:Digital_Twin_Healthcare -->
-
-    <owl:Class rdf:about="hr6g:Digital_Twin_Healthcare"/>
-    
-
-
-    <!-- hr6g:Edge_AI_Node -->
-
-    <owl:Class rdf:about="hr6g:Edge_AI_Node"/>
-    
-
-
-    <!-- hr6g:Elderly_Care_Assistance -->
-
-    <owl:Class rdf:about="hr6g:Elderly_Care_Assistance"/>
-    
-
-
-    <!-- hr6g:Healthcare_Robot -->
-
-    <owl:Class rdf:about="hr6g:Healthcare_Robot"/>
-    
-
-
-    <!-- hr6g:Medical_Data_Storage -->
-
-    <owl:Class rdf:about="hr6g:Medical_Data_Storage"/>
-    
-
-
-    <!-- hr6g:Rehabilitation_Robot -->
-
-    <owl:Class rdf:about="hr6g:Rehabilitation_Robot"/>
-    
-
-
-    <!-- hr6g:Rehabilitation_Therapy -->
-
-    <owl:Class rdf:about="hr6g:Rehabilitation_Therapy"/>
-    
-
-
-    <!-- hr6g:Remote_Healthcare -->
-
-    <owl:Class rdf:about="hr6g:Remote_Healthcare"/>
-    
-
-
-    <!-- hr6g:Robot_Assisted_Surgery -->
-
-    <owl:Class rdf:about="hr6g:Robot_Assisted_Surgery"/>
-    
-
-
-    <!-- hr6g:Surgical_Robot -->
-
-    <owl:Class rdf:about="hr6g:Surgical_Robot"/>
-    
-
-
-    <!-- hr6g:Telemedicine_Robot-changed -->
-
-    <owl:Class rdf:about="hr6g:Telemedicine_Robot-changed"/>
-    
-
-
-    <!-- hr6g:6G_Network -->
-
-    <owl:Class rdf:about="hr6g:6G_Network"/>
-    
-
-
-    <!-- http://example.org/healthcarerobotics6g#Rawi-added -->
-
-    <owl:Class rdf:about="http://example.org/healthcarerobotics6g#Rawi-added"/>
-    
-
-
-    <!-- http://example.org/healthcarerobotics6g#6G-Arm -->
-
-    <owl:Class rdf:about="http://example.org/healthcarerobotics6g#6G-Arm">
-        <rdfs:subClassOf rdf:resource="hr6g:Telemedicine_Robot-changed"/>
-    </owl:Class>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:c="https://w3id.org/6g-data-ontology/core#" xmlns:m="https://w3id.org/6g-data-ontology/healthcare-robotics#">
+<owl:Ontology rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics"><owl:imports rdf:resource="https://w3id.org/6g-data-ontology/core"/><owl:versionInfo>0.2.0</owl:versionInfo></owl:Ontology>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Robot"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Assistive_Robot"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Diagnostic_Robot"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Rehabilitation_Robot"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Surgical_Robot"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Telemedicine_Robot"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Edge_AI_Node"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Medical_Data_Storage"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Digital_Twin_Healthcare"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Application"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Autonomous_Disinfection"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Elderly_Care_Assistance"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Rehabilitation_Therapy"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Remote_Healthcare"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Robot_Assisted_Surgery"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#6G_Network"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Robot"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Device"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Assistive_Robot"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Device"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Diagnostic_Robot"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Device"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Rehabilitation_Robot"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Device"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Surgical_Robot"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Device"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Telemedicine_Robot"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Device"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Edge_AI_Node"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#EdgeNode"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Medical_Data_Storage"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Storage"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Digital_Twin_Healthcare"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DigitalTwin"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Application"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Autonomous_Disinfection"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Elderly_Care_Assistance"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Rehabilitation_Therapy"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Remote_Healthcare"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#Robot_Assisted_Surgery"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#6G_Network"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/></owl:Class>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#controlledBy"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Robot"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Edge_AI_Node"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#transmitsDataTo"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Robot"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Medical_Data_Storage"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#usedIn"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Robot"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Application"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/healthcare-robotics#virtualizedAs"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Healthcare_Robot"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/healthcare-robotics#Digital_Twin_Healthcare"/></owl:ObjectProperty>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
-

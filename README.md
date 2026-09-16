@@ -1,53 +1,52 @@
-# 6g-data-ontology-
-Open-source ontology framework for structuring, classifying, and semantically linking 6G network data across AI-driven communications, IoT, XR, digital twins, industrial automation, and future network intelligence use cases. 
+# 6G Data Ontology
 
-## Collaboration and Community Contribution
+An open, modular OWL ontology framework for structuring, classifying and semantically linking heterogeneous data and concepts across future 6G networks, computing environments, applications and vertical domains.
 
-This repository is an open collaborative initiative dedicated to the development of interoperable semantic data ontologies for future 6G ecosystems. The project aims to establish a common ontology-driven framework for organizing, classifying, and semantically interlinking heterogeneous 6G-related data across multiple domains including AI-native networking, industrial IoT, digital twins, XR, autonomous systems, smart cities, healthcare robotics, edge/cloud computing, and future semantic communication systems.
+## Architecture
 
-This project is intended to evolve as an open collaborative community initiative. In addition to traditional open-source contributions through pull requests, we warmly welcome motivated contributors to join the project as active repository collaborators and long-term members of the initiative. We strongly encourage participation from academia, industry, telecom operators, standards communities, semantic web researchers, and AI experts who wish to help shape the future of ontology-driven 6G ecosystems and intelligent semantic networking.
+Version 0.2 introduces a shared semantic core and seven use-case modules:
 
-We strongly encourage researchers, universities, telecom operators, standardization experts, ontology engineers, AI researchers, and industry stakeholders to contribute to this initiative. Contributions may include:
-- New ontology models and extensions
-- Additional 6G use cases and verticals
-- Semantic interoperability improvements
-- AI/ML integration concepts
-- Ontology alignment and mapping
-- Knowledge graph integration
-- Standardization-oriented contributions
-- Documentation and visualization improvements
-- Validation datasets and reasoning examples
+- `6G-core.OWL` — common classes and properties for data, network, compute, applications, QoS, AI, governance and sustainability.
+- `6G-onto-sustainable.OWL`
+- `6G-onto-smart-cities.OWL`
+- `6G-onto-industrial-IoT.OWL`
+- `6G-onto-digital-twin.OWL`
+- `6G-onto-industrial-robotics.OWL`
+- `6G-onto-healthcare-robotics.OWL`
+- `6G-onto-holographic-communications.OWL`
 
-The long-term vision of this project is to help establish a community-driven semantic foundation that may support future research activities, interoperability frameworks, AI-native network automation, and potential standardization efforts related to next-generation 6G systems.
+`6G-all.OWL` is the convenience entry point that imports the complete framework and the example ABox.
 
-## Ontology File Format and Tools
+The former misspelled `6G-onto-holographic-coummunications.OWL` is retained as a deprecated compatibility wrapper.
 
-The ontology files in this repository are primarily provided in OWL (Web Ontology Language) format and can be opened, edited, validated, and extended using several semantic web and ontology engineering tools, including:
+## Knowledge-graph example and validation
 
-- Protégé (recommended)
-- WebProtégé
-- Apache Jena
-- TopBraid Composer
-- RDFox
-- OntoStudio
-- Eclipse RDF4J
-- Neo4j with RDF/OWL plugins
-- GraphDB
-- Stardog
+`6G-example-instances.OWL` provides a small ABox illustrating instance-level population. `example-queries.sparql` provides competency-question examples for querying the ontology.
 
-These tools support ontology visualization, semantic reasoning, RDF/OWL editing, SPARQL querying, and knowledge graph integration.
+The ontology modules are primarily schema/TBox resources; the example file demonstrates how they can be populated as a knowledge graph.
 
-## Contributing
+## Opening and editing
 
-Community contributions are highly welcome. Researchers and developers interested in participating may:
-- Open issues
-- Submit pull requests
-- Propose new ontology classes and relationships
-- Suggest interoperability mappings
-- Contribute new 6G use-case ontologies
-- Improve semantic consistency and documentation
+Protégé is recommended for interactive editing and reasoning. Other suitable tools include WebProtégé, Apache Jena, RDF4J, GraphDB, Stardog, RDFox and TopBraid.
 
-Together, we hope to build a scalable and interoperable ontology ecosystem capable of supporting the future evolution of intelligent 6G communication networks.
+Open `6G-all.OWL` to work with the complete modular ontology. Because OWL imports use persistent ontology IRIs, local import mappings may be required when working offline.
 
+## Design principles
 
-<img width="975" height="673" alt="image" src="https://github.com/user-attachments/assets/3f822d1f-376a-4b17-a0c5-b2112b5b04fc" />
+The project follows a modular core-plus-extension model. Shared concepts belong in the core; use-case-specific concepts remain in their modules and align to the core through OWL subclass/property semantics. Existing domain vocabulary is preserved where practical while malformed experimental identifiers and unintended multi-domain/multi-range property semantics are corrected.
+
+Future work includes alignment with reusable vocabularies such as SOSA/SSN, richer logical axioms, expanded competency questions, instance datasets, SHACL validation, reasoning tests, provenance, versioned releases and mappings to relevant telecom/industry information models.
+
+## Collaboration and community contribution
+
+This repository is an open collaborative initiative. We welcome researchers, industry experts, telecom operators, standards communities, ontology engineers, Semantic Web researchers and AI specialists.
+
+Contributions may include new use cases, ontology extensions, mappings, competency questions, validation datasets, reasoning examples, documentation, visualizations and standardization-oriented work. Contributions through issues and pull requests are welcome, and motivated contributors may also request to participate as long-term project collaborators.
+
+## Status
+
+This repository is a research seed and community-extensible ontology framework. It is **not** presented as a finalized or standardized 6G ontology.
+
+## License
+
+See `LICENSE`.
