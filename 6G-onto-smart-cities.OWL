@@ -1,96 +1,37 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:s6g="http://example.org/sustainable6g#">
-
-    <owl:Ontology rdf:about="http://example.org/sustainable6g"/>
-
-    <!-- Smart City Data Sources -->
-    <owl:Class rdf:about="s6g:SmartCitySource"/>
-    <owl:Class rdf:about="s6g:Traffic_Sensors">
-        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Air_Quality_Sensors">
-        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Smart_Streetlights">
-        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Surveillance_Cameras">
-        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Smart_Waste_Bins">
-        <rdfs:subClassOf rdf:resource="s6g:SmartCitySource"/>
-    </owl:Class>
-
-    <!-- Smart City Data Types -->
-    <owl:Class rdf:about="s6g:Traffic_Data">
-        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Environmental_Data">
-        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Energy_Consumption_Data">
-        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Public_Safety_Data">
-        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Waste_Management_Data">
-        <rdfs:subClassOf rdf:resource="s6g:DataType"/>
-    </owl:Class>
-
-    <!-- Smart City Transmission & Storage -->
-    <owl:Class rdf:about="s6g:5G_V2X_Communication">
-        <rdfs:subClassOf rdf:resource="s6g:Transmission"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Urban_Edge_Cloud">
-        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Municipal_Data_Lakes">
-        <rdfs:subClassOf rdf:resource="s6g:Storage"/>
-    </owl:Class>
-
-    <!-- Sustainability & Compliance -->
-    <owl:Class rdf:about="s6g:Carbon_Tracking_SmartCities">
-        <rdfs:subClassOf rdf:resource="s6g:SustainabilityMetrics"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Renewable_Energy_Integration">
-        <rdfs:subClassOf rdf:resource="s6g:SustainabilityMetrics"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:GDPR_Compliance">
-        <rdfs:subClassOf rdf:resource="s6g:RegulatoryCompliance"/>
-    </owl:Class>
-    <owl:Class rdf:about="s6g:Smart_City_Cybersecurity">
-        <rdfs:subClassOf rdf:resource="s6g:RegulatoryCompliance"/>
-    </owl:Class>
-
-    <!-- Relationships -->
-    <owl:ObjectProperty rdf:about="s6g:generates">
-        <rdfs:domain rdf:resource="s6g:SmartCitySource"/>
-        <rdfs:range rdf:resource="s6g:DataType"/>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="s6g:isStoredIn">
-        <rdfs:domain rdf:resource="s6g:DataType"/>
-        <rdfs:range rdf:resource="s6g:Storage"/>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="s6g:isTransmittedBy">
-        <rdfs:domain rdf:resource="s6g:DataType"/>
-        <rdfs:range rdf:resource="s6g:Transmission"/>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="s6g:impacts">
-        <rdfs:domain rdf:resource="s6g:Transmission"/>
-        <rdfs:range rdf:resource="s6g:SustainabilityMetrics"/>
-    </owl:ObjectProperty>
-
-    <owl:ObjectProperty rdf:about="s6g:compliesWith">
-        <rdfs:domain rdf:resource="s6g:SmartCitySource"/>
-        <rdfs:range rdf:resource="s6g:RegulatoryCompliance"/>
-    </owl:ObjectProperty>
-
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:c="https://w3id.org/6g-data-ontology/core#" xmlns:m="https://w3id.org/6g-data-ontology/smart-cities#">
+<owl:Ontology rdf:about="https://w3id.org/6g-data-ontology/smart-cities"><owl:imports rdf:resource="https://w3id.org/6g-data-ontology/core"/><owl:versionInfo>0.2.0</owl:versionInfo></owl:Ontology>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#SmartCitySource"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Traffic_Sensors"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Air_Quality_Sensors"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Smart_Streetlights"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Surveillance_Cameras"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Smart_Waste_Bins"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Traffic_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Environmental_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Energy_Consumption_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Public_Safety_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Waste_Management_Data"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#5G_V2X_Communication"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Urban_Edge_Cloud"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Municipal_Data_Lakes"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Carbon_Tracking_SmartCities"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Renewable_Energy_Integration"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#GDPR_Compliance"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Smart_City_Cybersecurity"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#SmartCitySource"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataSource"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Traffic_Sensors"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Sensor"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Air_Quality_Sensors"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Sensor"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Traffic_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Environmental_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Energy_Consumption_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Public_Safety_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Waste_Management_Data"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#5G_V2X_Communication"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Transmission"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Urban_Edge_Cloud"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#EdgeNode"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Municipal_Data_Lakes"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#Storage"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Carbon_Tracking_SmartCities"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#SustainabilityMetric"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#GDPR_Compliance"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#RegulatoryCompliance"/></owl:Class>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/smart-cities#Smart_City_Cybersecurity"><rdfs:subClassOf rdf:resource="https://w3id.org/6g-data-ontology/core#RegulatoryCompliance"/></owl:Class>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/smart-cities#generates"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/smart-cities#SmartCitySource"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/smart-cities#Traffic_Data"/></owl:ObjectProperty>
 </rdf:RDF>
