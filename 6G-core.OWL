@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:c="https://w3id.org/6g-data-ontology/core#">
+<owl:Ontology rdf:about="https://w3id.org/6g-data-ontology/core"><rdfs:label>6G Data Ontology Core</rdfs:label><owl:versionInfo>0.2.0</owl:versionInfo></owl:Ontology>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#DataSource"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#DataType"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#CollectionMethod"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Transmission"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Storage"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Processing"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#ComputeResource"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#EdgeNode"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#CloudNode"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#NetworkEntity"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#NetworkService"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Application"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#VerticalDomain"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#QoSRequirement"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#LatencyRequirement"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#ReliabilityRequirement"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#BandwidthRequirement"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#SecurityRequirement"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#RegulatoryCompliance"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#SustainabilityMetric"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#AIModel"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#DigitalTwin"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Sensor"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Actuator"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#UserPlaneData"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#ControlPlaneData"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#KnowledgeArtifact"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Location"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#TimeContext"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Device"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#Agent"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#NetworkSlice"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#CommunicationLink"/>
+<owl:Class rdf:about="https://w3id.org/6g-data-ontology/core#DataGovernancePolicy"/>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#generates"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataSource"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#isStoredIn"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#Storage"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#isTransmittedBy"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#Transmission"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#isProcessedBy"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#Processing"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#supports"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkService"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#requiresQoS"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#QoSRequirement"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#runsOn"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#ComputeResource"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#locatedAt"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#Location"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#compliesWith"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataSource"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#RegulatoryCompliance"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#impacts"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Transmission"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#SustainabilityMetric"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#usesModel"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#AIModel"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#hasDigitalTwin"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#DigitalTwin"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#observes"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Sensor"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#actsOn"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Actuator"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#governedBy"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#DataGovernancePolicy"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#belongsToVertical"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#VerticalDomain"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#usesSlice"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#Application"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkSlice"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#connectedBy"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#CommunicationLink"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#producesKnowledge"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#AIModel"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#KnowledgeArtifact"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#hasSource"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#DataSource"/></owl:ObjectProperty>
+<owl:ObjectProperty rdf:about="https://w3id.org/6g-data-ontology/core#hasDestination"><rdfs:domain rdf:resource="https://w3id.org/6g-data-ontology/core#DataType"/><rdfs:range rdf:resource="https://w3id.org/6g-data-ontology/core#NetworkEntity"/></owl:ObjectProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#latencyMs"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#reliability"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#dataRateMbps"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#samplingRateHz"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#energyConsumptionW"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#carbonFootprintGCO2e"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#sensitivityLevel"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/></owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:about="https://w3id.org/6g-data-ontology/core#priority"><rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/></owl:DatatypeProperty>
+</rdf:RDF>
